@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Course_project_demo2</string>
+
+
+    <string name="login">Login</string>
+    <string name="teacher_current">Оценка преподавателей в текущем семестре</string>
+    <string name="teacher_rating">Рейтинг преподавателей</string>
+    <string name="chart">Подробный отчёт</string>
+</resources>

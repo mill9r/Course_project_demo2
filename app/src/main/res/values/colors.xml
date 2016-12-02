@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="quizblue">#4257b2</color>
+    <color name="quizblue2">#4f69d8</color>
+    <color name="quizgreen">#3CCFCF</color>
+    <color name="quizgreen2">#34e1e1</color>
+    <color name="quizorange">#FFCD1F</color>
+    <color name="quizgray">#f1f1f1</color>
+    <color name="quizwhite">#fff</color>
+    <color name="quizgrayText">#455358</color>
+
+</resources>
