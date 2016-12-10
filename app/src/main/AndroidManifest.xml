@@ -5,10 +5,11 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/test"
-        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/CustomTheme">
-        <activity android:name=".Login">
+        <activity android:name=".Login"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,6 +18,8 @@
         </activity>
         <activity
             android:name=".MainMenu"
+            android:screenOrientation="portrait"
+            android:label="@string/main_menu"
             android:theme="@style/CustomTheme"></activity>
     </application>
 

@@ -6,4 +6,8 @@
     <string name="teacher_current">Оценка преподавателей в текущем семестре</string>
     <string name="teacher_rating">Рейтинг преподавателей</string>
     <string name="chart">Подробный отчёт</string>
+    <string name="help">Помощь</string>
+    <string name="about">О программе</string>
+    <string name="quit">Выйти</string>
+    <string name="main_menu">Главное меню</string>
 </resources>
