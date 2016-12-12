@@ -7,9 +7,9 @@
         android:icon="@mipmap/test"
         android:supportsRtl="true"
         android:theme="@style/CustomTheme">
-        <activity android:name=".Login"
-            android:screenOrientation="portrait"
-            >
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,9 +18,10 @@
         </activity>
         <activity
             android:name=".MainMenu"
-            android:screenOrientation="portrait"
             android:label="@string/main_menu"
-            android:theme="@style/CustomTheme"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity android:name=".FacultyMenu"></activity>
     </application>
 
 </manifest>

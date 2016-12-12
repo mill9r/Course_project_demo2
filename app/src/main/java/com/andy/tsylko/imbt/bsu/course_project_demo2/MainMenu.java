@@ -1,20 +1,29 @@
 package com.andy.tsylko.imbt.bsu.course_project_demo2;
 
-import android.content.ClipData;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.andy.tsylko.imbt.bsu.course_project_demo2.DataBase.DatabaseAdapter;
+import com.andy.tsylko.imbt.bsu.course_project_demo2.DataBase.DatabaseHelper;
+import com.andy.tsylko.imbt.bsu.course_project_demo2.Entity.Faculty;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainMenu extends AppCompatActivity {
     private Toolbar toolbar;
     private TextView eval_teach;
     private TextView teach_rating;
     private TextView teach_progress;
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -60,6 +69,46 @@ public class MainMenu extends AppCompatActivity {
         teach_progress.setTypeface(t, Typeface.NORMAL);
         teach_rating.setTypeface(t, Typeface.NORMAL);
 
+
+        teach_rating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenu.this, FacultyMenu.class);
+                startActivity(intent);
+            }
+        });
+
+
+        eval_teach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseAdapter d = new DatabaseAdapter(MainMenu.this);
+                List<Faculty> f = new ArrayList<Faculty>();
+
+                f = d.getAllFaculties();
+                Toast.makeText(MainMenu.this, String.valueOf(f.size()), Toast.LENGTH_LONG).show();
+
+
+            }
+        });
+
+
+        teach_progress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseAdapter d = new DatabaseAdapter(MainMenu.this);
+                d.insertFaculty("Физический");
+                d.insertFaculty("Химический");
+                d.insertFaculty("Биологический");
+                d.insertFaculty("Географический");
+                d.insertFaculty("Филологический");
+                d.insertFaculty("Экономический");
+                d.insertFaculty("Исторический");
+                d.insertFaculty("Прикладной математики и информатики");
+                Toast.makeText(MainMenu.this, "Database is create", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 
     }
