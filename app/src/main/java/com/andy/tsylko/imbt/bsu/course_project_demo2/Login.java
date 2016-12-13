@@ -30,9 +30,9 @@ public class Login extends AppCompatActivity {
                 int cardN = Integer.parseInt(cardNumber.getText().toString());
                 String pass = password.getText().toString();
 
-                if (cardN == 12345) {
+                if (cardN == 1) {
 
-                    if (pass.equals("qwerty")) {
+                    if (pass.equals("q")) {
                         Intent intent = new Intent(Login.this, MainMenu.class);
                         startActivity(intent);
                     } else {

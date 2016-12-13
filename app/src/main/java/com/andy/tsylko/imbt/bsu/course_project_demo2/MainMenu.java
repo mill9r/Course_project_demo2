@@ -11,9 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.andy.tsylko.imbt.bsu.course_project_demo2.DataBase.DatabaseAdapter;
-import com.andy.tsylko.imbt.bsu.course_project_demo2.DataBase.DatabaseHelper;
-import com.andy.tsylko.imbt.bsu.course_project_demo2.Entity.Faculty;
+import com.andy.tsylko.imbt.bsu.course_project_demo2.database.DatabaseAdapter;
+import com.andy.tsylko.imbt.bsu.course_project_demo2.entity.Faculty;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +48,7 @@ public class MainMenu extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
+//sharepreference
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,11 +82,12 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DatabaseAdapter d = new DatabaseAdapter(MainMenu.this);
+                d.open();
                 List<Faculty> f = new ArrayList<Faculty>();
 
                 f = d.getAllFaculties();
                 Toast.makeText(MainMenu.this, String.valueOf(f.size()), Toast.LENGTH_LONG).show();
-
+                d.close();
 
             }
         });
@@ -97,14 +97,32 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DatabaseAdapter d = new DatabaseAdapter(MainMenu.this);
-                d.insertFaculty("Физический");
-                d.insertFaculty("Химический");
-                d.insertFaculty("Биологический");
-                d.insertFaculty("Географический");
-                d.insertFaculty("Филологический");
-                d.insertFaculty("Экономический");
-                d.insertFaculty("Исторический");
-                d.insertFaculty("Прикладной математики и информатики");
+                d.open();
+
+//                 faculties
+//                d.insertFaculty("Физический");
+//                d.insertFaculty("Химический");
+//                d.insertFaculty("Биологический");
+//                d.insertFaculty("Географический");
+//                d.insertFaculty("Филологический");
+//                d.insertFaculty("Экономический");
+//                d.insertFaculty("Исторический");
+//                d.insertFaculty("Прикладной математики и информатики");
+
+//                d.insertDepartment("Кафедра общей физики",1);
+//                d.insertDepartment("Кафедра биофизики",1);
+//                d.insertDepartment("Кафедра компьютерного моделирования",1);
+//                d.insertDepartment("Кафедра высшей математики и математической физики",1);
+//                d.insertDepartment("Кафедра энергофизики",1);
+//                d.insertDepartment("Кафедра ядерной физики",1);
+//                d.insertDepartment("Кафедра методики преподавания физики и информатики",1);
+//                d.insertDepartment("Кафедра физики полупроводников и наноэлектроники",1);
+
+              
+
+
+
+                d.close();
                 Toast.makeText(MainMenu.this, "Database is create", Toast.LENGTH_SHORT).show();
 
             }

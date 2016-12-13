@@ -21,7 +21,8 @@
             android:label="@string/main_menu"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
-        <activity android:name=".FacultyMenu"></activity>
+        <activity android:name=".FacultyMenu" />
+        <activity android:name=".DepartmentMenu"></activity>
     </application>
 
 </manifest>

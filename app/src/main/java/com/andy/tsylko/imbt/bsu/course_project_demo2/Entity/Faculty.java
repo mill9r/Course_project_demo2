@@ -1,4 +1,4 @@
-package com.andy.tsylko.imbt.bsu.course_project_demo2.Entity;
+package com.andy.tsylko.imbt.bsu.course_project_demo2.entity;
 
 /**
  * Created by Administrator on 12/2/2016.
@@ -21,8 +21,6 @@ public class Faculty {
 
     @Override
     public String toString() {
-        return "Faculty{" +
-                "facultyName='" + facultyName + '\'' +
-                '}';
+        return facultyName;
     }
 }

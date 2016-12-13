@@ -1,10 +1,11 @@
-package com.andy.tsylko.imbt.bsu.course_project_demo2.Entity;
+package com.andy.tsylko.imbt.bsu.course_project_demo2.entity;
 
 /**
  * Created by Administrator on 12/12/2016.
  */
 
 public class Department {
+
     private String departmentName;
 
     public Department(String departmentName) {
@@ -21,8 +22,6 @@ public class Department {
 
     @Override
     public String toString() {
-        return "Department{" +
-                "departmentName='" + departmentName + '\'' +
-                '}';
+        return departmentName;
     }
 }
