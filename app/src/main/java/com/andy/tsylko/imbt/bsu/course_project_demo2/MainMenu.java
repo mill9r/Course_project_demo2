@@ -48,7 +48,8 @@ public class MainMenu extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-//sharepreference
+
+    //sharepreference
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,26 +101,39 @@ public class MainMenu extends AppCompatActivity {
                 d.open();
 
 //                 faculties
-//                d.insertFaculty("Физический");
-//                d.insertFaculty("Химический");
-//                d.insertFaculty("Биологический");
-//                d.insertFaculty("Географический");
-//                d.insertFaculty("Филологический");
-//                d.insertFaculty("Экономический");
-//                d.insertFaculty("Исторический");
-//                d.insertFaculty("Прикладной математики и информатики");
+                d.insertFaculty("Физический");
+                d.insertFaculty("Химический");
+                d.insertFaculty("Биологический");
+                d.insertFaculty("Географический");
+                d.insertFaculty("Филологический");
+                d.insertFaculty("Экономический");
+                d.insertFaculty("Исторический");
+                d.insertFaculty("Прикладной математики и информатики");
 
-//                d.insertDepartment("Кафедра общей физики",1);
-//                d.insertDepartment("Кафедра биофизики",1);
-//                d.insertDepartment("Кафедра компьютерного моделирования",1);
-//                d.insertDepartment("Кафедра высшей математики и математической физики",1);
-//                d.insertDepartment("Кафедра энергофизики",1);
-//                d.insertDepartment("Кафедра ядерной физики",1);
-//                d.insertDepartment("Кафедра методики преподавания физики и информатики",1);
-//                d.insertDepartment("Кафедра физики полупроводников и наноэлектроники",1);
+                d.insertDepartment("Кафедра общей физики",1);
+                d.insertDepartment("Кафедра биофизики",1);
+                d.insertDepartment("Кафедра компьютерного моделирования",1);
+                d.insertDepartment("Кафедра высшей математики и математической физики",1);
+                d.insertDepartment("Кафедра энергофизики",1);
+                d.insertDepartment("Кафедра ядерной физики",1);
+                d.insertDepartment("Кафедра методики преподавания физики и информатики",1);
+                d.insertDepartment("Кафедра физики полупроводников и наноэлектроники",1);
 
-              
+                d.insertGroup(220098, 2, 2016, 9, 12);
+                d.insertGroup(230090, 2, 2015, 9, 12);
+                d.insertGroup(244000, 2, 2014, 9, 12);
 
+
+                d.insertStudent("Андрей", "Ваганов", 101, 220098, "101");
+                d.insertStudent("Дмитрий", "Эль", 102, 220098, "102");
+                d.insertStudent("Вагит", "Алекперов", 103, 220098, "103");
+                d.insertStudent("Леонов", "Сергей", 104, 220098, "105");
+                d.insertStudent("Хоркхаймер", "Макс", 105, 220098, "105");
+
+
+                d.insertTeacher("Герман","Олег","Витольдович",1001,"кандидат технических наук",2);
+                d.insertTeacher("Дерюшев","Андрей","Анатольевич",1002,"кандидат технических наук",2);
+                d.insertTeacher("Иванченко","Виктор","Владимирович",1003,"магистр",2);
 
 
                 d.close();
