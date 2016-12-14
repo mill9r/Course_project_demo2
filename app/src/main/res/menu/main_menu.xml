@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.andy.tsylko.imbt.bsu.course_project_demo2.MainMenu">
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="100"
+        android:title="@string/quit"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_help"
+        android:title="@string/help"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/about"
+        app:showAsAction="never"
+        />
+
+</menu>
